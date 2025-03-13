@@ -1,15 +1,6 @@
 name: Prisma-Security-Scan
 
-on:
-  workflow_call:
-    inputs:
-      config-path:
-        required: true
-        type: string
-    secrets:
-      personal_access_token:
-        required: true
-        
+on:        
   push:
     branches: ["main"]
   pull_request:
