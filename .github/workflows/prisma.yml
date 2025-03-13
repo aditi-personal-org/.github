@@ -1,11 +1,6 @@
 name: Prisma-Security-Scan
 
-on:
-  push:
-    branches: [ "master", "main", "dev", "stage" ]
-  pull_request:
-    branches: [ "master", "main", "dev", "stage" ]
-  workflow_dispatch:
+on: [push]
 
 jobs:
   build:
@@ -23,3 +18,5 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           use_enforcement_rules: true
+
+
